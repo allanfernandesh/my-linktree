@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+        to right,
+        rgba(24, 43, 114, 1),
+        rgb(24, 43, 114, 0.7)
+    );
+}
+
+section {
+    position: absolute;
+    height: 100vh;
+    z-index: -10;
+}
+
+.informations {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    z-index: -10;
+}
+
+.informations .image {
+    position: relative;
+}
+
+.informations img {
+    height: 8rem;
+    width: 8.5rem;
+    border-radius: 4rem;
+}
+
+.informations .image::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(
+        45deg,
+        #89ff00,
+        #00bcd4,
+        #0000ff,
+        #00ff00,
+        #ffff00,
+        #ff0000
+    );
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 4rem;
+    z-index: -1;
+    animation: backgroundBorderRotate 5s linear infinite;
+}
+
+@keyframes backgroundBorderRotate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 50% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.informations .descriptions h1 {
+    margin: 0;
+    width: 100%;
+    padding: 0 8px;
+    color: rgba(255, 255, 255, 0.05);
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.informations .descriptions h1 span {
+    display: table-cell;
+    margin: 0 6px;
+    padding: 0;
+    animation: glowing 4.25s linear infinite;
+}
+.informations .descriptions h1 span:nth-child(1) {
+    animation-delay: 1s;
+}
+.informations .descriptions h1 span:nth-child(2) {
+    animation-delay: 1.25s;
+}
+.informations .descriptions h1 span:nth-child(3) {
+    animation-delay: 1.5s;
+}
+.informations .descriptions h1 span:nth-child(4) {
+    animation-delay: 1.75s;
+}
+.informations .descriptions h1:nth-child(2) span:nth-child(1) {
+    animation-delay: 2s;
+}
+.informations .descriptions h1:nth-child(2) span:nth-child(2) {
+    animation-delay: 2.25s;
+}
+.informations .descriptions h1:nth-child(2) span:nth-child(3) {
+    animation-delay: 2.5s;
+}
+.informations .descriptions h1:nth-child(2) span:nth-child(4) {
+    animation-delay: 2.75s;
+}
+.informations .descriptions h1:nth-child(2) span:nth-child(5) {
+    animation-delay: 3s;
+}
+.informations .descriptions h1:nth-child(2) span:nth-child(6) {
+    animation-delay: 3.25s;
+}
+.informations .descriptions h1:nth-child(2) span:nth-child(7) {
+    animation-delay: 3.5s;
+}
+.informations .descriptions h1:nth-child(2) span:nth-child(8) {
+    animation-delay: 3.75s;
+}
+.informations .descriptions h1:nth-child(2) span:nth-child(9) {
+    animation-delay: 4s;
+}
+.informations .descriptions h1:nth-child(2) span:nth-child(10) {
+    animation-delay: 4.25s;
+}
+
+@keyframes glowing {
+    0%,
+    100% {
+        color: rgba(255, 255, 255, 1);
+        filter: blur(2px);
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff,
+            0 0 120px #fff, 0 0 200px #fff, 0 0 300px #fff, 0 0 400px #fff;
+    }
+    5%,
+    95% {
+        color: rgba(255, 255, 255, 0.05);
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+
+.informations .descriptions h3 {
+    margin: 8px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.informations .skills {
+    display: flex;
+    justify-content: space-between;
+}
+
+.informations .skills i {
+    font-size: 35px;
+    margin-right: 10px;
+}
+.informations .skills i:last-child {
+    margin-right: 0px;
+}
+.informations .skills i.fa-html5 {
+    color: #e34f26;
+}
+.informations .skills i.fa-css3-alt {
+    color: #264de4;
+}
+.informations .skills i.fa-js {
+    color: rgb(255, 198, 55);
+}
+.informations .skills i.react1 {
+    color: cyan;
+}
+.informations .skills i.react2 {
+    color: darkmagenta;
+}
+.informations .skills i.fa-node {
+    color: forestgreen;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    height: 45%;
+}
+
+.container .box {
+    position: relative;
+    height: 100%;
+    background-color: rgba(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+.container .box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    transform: skew(2deg, 2deg);
+    z-index: -1;
+    background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+.container .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(206, 206, 206, 0.2);
+    pointer-events: none;
+}
+
+.container .box .links {
+    position: absolute;
+    background: rgba(206, 206, 206, 0.4);
+    width: 200px;
+    height: 50px;
+    top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 20px 50px inset rgba(24, 13, 102, 0.2);
+    animation: slideTop 2s ease 0.25s both;
+    overflow: hidden;
+}
+
+.container .box .links i {
+    font-size: 35px;
+}
+.container .box .links i.fa-github {
+    font-size: 35px;
+    color: #000;
+}
+.container .box .links i.fa-linkedin {
+    color: #0e76a8;
+}
+.container .box .links i.fa-telegram {
+    color: #0088cc;
+}
+
+.container .box .links span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #89ff00, #1779ff);
+    animation: borderSnakeTop 1s linear infinite;
+}
+
+.container .box .links span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #89ff00, #1779ff);
+    animation: borderSnakeRight 1s linear infinite;
+}
+.container .box .links span:nth-child(5) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, #89ff00, #1779ff);
+    animation: borderSnakeLeft 1s linear infinite;
+    animation-delay: 0.3s;
+}
+.container .box .links span:nth-child(7) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, #89ff00, #1779ff);
+    animation: borderSnakeBottom 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideTop {
+    from {
+        opacity: 0;
+        top: 40px;
+    }
+    to {
+        opacity: 1;
+        top: -20px;
+    }
+}
+
+@keyframes borderSnakeBottom {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+@keyframes borderSnakeTop {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes borderSnakeRight {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+@keyframes borderSnakeLeft {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
+.container .content {
+    position: relative;
+    padding: 20px;
+}
+
+@media (max-width: 590px) {
+    .informations .descriptions h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 780px) {
+    .container .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .content p {
+        width: 60%;
+    }
+
+    .container .box .links {
+        height: 60px;
+        width: 300px;
+    }
+    .container .box .links i {
+        font-size: 35px;
+    }
+    .container .box .links i.fa-github {
+        font-size: 35px;
+        color: #000;
+    }
+}
