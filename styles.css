@@ -13,12 +13,11 @@ body {
         rgba(24, 43, 114, 1),
         rgb(24, 43, 114, 0.7)
     );
-    overflow: hidden;
 }
 
 section {
     position: absolute;
-    height: 100vh;
+    height: calc(100vh - 20px);
     width: 100%;
     z-index: -10;
 }
@@ -37,12 +36,16 @@ section {
 
 .informations .image {
     position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
 }
 
 .informations img {
-    height: 8.5rem;
-    width: 8.5rem;
-    border-radius: 4rem;
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
 }
 
 .informations .image::before {
@@ -62,7 +65,7 @@ section {
     background-size: 400%;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    border-radius: 4rem;
+    border-radius: 50%;
     z-index: -1;
     animation: backgroundBorderRotate 5s linear infinite;
 }
